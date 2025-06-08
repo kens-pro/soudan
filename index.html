@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ピアノ選びの失敗談と成功への道 | ピアノ選びの小冊子</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- CSS Variables --- */
+        :root {
+            --primary-color: #2c3e50; /* ダークグレー */
+            --secondary-color: #e74c3c; /* 赤 */
+            --accent-color: #f39c12; /* オレンジ */
+            --gold-accent: #d4af37; /* ゴールド */
+            --text-primary: #2c3e50;
+            --text-secondary: #7f8c8d;
+            --text-light: #ffffff;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa; /* ライトグレー */
+            --bg-tertiary: #ecf0f1; /* やや濃いライトグレー */
+            --border-color: #e1e8ed;
+            --shadow-light: 0 2px 10px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.15);
+            --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.2);
+            --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* パープル系グラデーション */
+            --gradient-gold: linear-gradient(135deg, #d4af37 0%, #ffd700 100%); /* ゴールド系グラデーション */
+            --footer-bg-gradient: linear-gradient(135deg, #E0F2F7 0%, #B2EBF2 100%); /* フッター用明るい水色グラデーション */
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-secondary);
+            overflow-x: hidden;
+        }
+
+        .page-wrapper {
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .page-wrapper::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* 全体の背景グラデーション */
+            z-index: -2;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- Header Styles for Page 3 --- */
+        .page-3-header {
+            background: var(--gradient-primary); /* パープル系グラデーション */
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-3-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 40%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(15deg);
+            animation: slideIn 1s ease-out;
+        }
+
+        .page-3-title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            color: var(--text-light);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        /* --- Main Content for Page 3 --- */
+        .page-3-main-content {
+            padding: 80px 0;
+        }
+
+        /* Section: Failure Story */
+        .failure-story-section {
+            margin-bottom: 80px;
+        }
+
+        .story-box {
+            background: var(--bg-primary);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow-medium);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .story-box::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 120px;
+            color: var(--gold-accent);
+            opacity: 0.3;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        .story-intro {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .story-quote {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid var(--gold-accent);
+            background: linear-gradient(90deg, rgba(212, 175, 55, 0.1) 0%, transparent 100%);
+            position: relative;
+            z-index: 1;
+        }
+
+        .story-conclusion {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            text-align: center;
+            font-weight: 500;
+        }
+
+        .story-source {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            font-style: italic;
+            text-align: right;
+            margin-bottom: 40px;
+            padding: 20px;
+            background: var(--bg-tertiary);
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--accent-color);
+        }
+
+        /* Personal Experience */
+        .personal-experience {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 40px 0;
+            align-items: start;
+        }
+
+        .experience-text {
+            background: var(--bg-primary);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .experience-text:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .experience-text p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .experience-right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* 思考アイコンのスタイル - imgタグを使用 */
+        .person-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-top: 20px;
+            display: block; /* 画像として表示 */
+            box-shadow: var(--shadow-medium);
+            object-fit: cover; /* 画像が収まるように */
+        }
+
+        /* Piano Images */
+        .piano-images {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .piano-image-wrapper {
+            text-align: center;
+            background: var(--bg-primary);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            padding: 15px;
+            transition: var(--transition);
+        }
+
+        .piano-image-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .piano-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            display: block; /* 画像はブロック要素に */
+            margin-bottom: 10px;
+        }
+
+        .image-caption {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Teacher View */
+        .teacher-view {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: var(--text-light);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin: 40px 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .teacher-view::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="80" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="60" cy="30" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        /* Section Question */
+        .section-question {
+            text-align: center;
+            margin: 60px 0 40px;
+            position: relative;
+        }
+
+        .question-text {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2.2rem;
+            font-weight: 600;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            position: relative;
+        }
+
+        .question-text::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 3px;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+        }
+
+        /* Next Page Prompt */
+        .next-page-prompt {
+            text-align: center;
+            margin: 40px 0;
+            animation: bounce 2s infinite;
+        }
+
+        /* 矢印アイコンのスタイル - divタグを使用 */
+        .arrow-down-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .next-page-prompt p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Common Case Section */
+        .common-case-section {
+            background: var(--bg-primary);
+            padding: 60px 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            margin-top: 60px;
+        }
+
+        .common-case-title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .common-case-title::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-gold);
+            border-radius: 2px;
+        }
+
+        .common-case-description {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Key Advice Block */
+        .key-advice-block {
+            background: var(--gradient-primary);
+            color: var(--text-light);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: var(--shadow-heavy);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .key-advice-block::before {
+            content: '💡';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            opacity: 0.3;
+        }
+
+        .advice-main-title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .highlight-underline {
+            position: relative;
+            z-index: 1;
+        }
+
+        .highlight-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            z-index: -1;
+        }
+
+        .advice-sub-title {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        /* Problem Solution List */
+        .problem-solution-list {
+            background: var(--bg-tertiary);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .list-intro {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .problem-solution-list ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .problem-solution-list li {
+            margin-bottom: 20px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .problem-solution-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .problem-solution-list .bold {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .problem-solution-list ul ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .problem-solution-list ul ul li::before {
+            content: '→';
+            color: var(--text-secondary);
+        }
+
+        /* 疑問を持つアイコンのスタイル - imgタグを使用 */
+        .problem-list-person-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: block; /* 画像として表示 */
+            box-shadow: var(--shadow-light);
+            object-fit: cover; /* 画像が収まるように */
+        }
+
+        /* Teacher Knowledge Limit */
+        .teacher-knowledge-limit {
+            background: var(--bg-primary);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary-color);
+            margin: 40px 0;
+            box-shadow: var(--shadow-light);
+        }
+
+        .teacher-knowledge-limit p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+
+        .teacher-knowledge-limit ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .teacher-knowledge-limit li {
+            padding: 15px 0;
+            padding-left: 30px;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .teacher-knowledge-limit li::before {
+            content: '⚠️';
+            position: absolute;
+            left: 0;
+            top: 15px;
+        }
+
+        /* Final Advice */
+        .final-conclusion-text {
+            font-size: 1.3rem;
+            text-align: center;
+            margin: 40px 0 20px;
+            color: var(--text-primary); /* ダークグレーで視認性確保 */
+            font-weight: 500;
+        }
+
+        .final-advice-title {
+            font-family: 'Noto Serif JP', serif;
+            font-size: 2.5rem;
+            font-weight: 600;
+            text-align: center;
+            margin: 20px 0;
+            /* ここを修正：グラデーションテキストから単色テキストへ変更し視認性を向上 */
+            color: var(--primary-color); /* ダークグレー */
+            /* -webkit-background-clip: text; */
+            /* -webkit-text-fill-color: transparent; */
+            /* background-clip: text; */
+        }
+
+        .final-call-to-action {
+            font-size: 1.5rem;
+            text-align: center;
+            color: var(--secondary-color); /* 赤色で強調 */
+            font-weight: 600;
+            margin-bottom: 40px;
+        }
+
+        /* FAQ and Contact */
+        .faq-and-contact-info {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .faq-card {
+            background: var(--bg-primary);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+
+        .faq-card::before {
+            content: 'FAQ';
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: var(--accent-color);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .faq-card p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .faq-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .faq-card li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1rem;
+            color: var(--text-secondary);
+        }
+
+        .faq-card li::before {
+            content: 'Q';
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: var(--gold-accent);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 0.8rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Contact Card (Footer) - Color changed for better readability and warmer feel */
+        .contact-card-bottom {
+            background: var(--footer-bg-gradient); /* 明るい水色グラデーション */
+            color: var(--text-primary); /* テキストカラーをプライマリーカラーに */
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-heavy);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-card-bottom::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0,0,0,0.05) 0%, transparent 70%); /* 背景の透明度を調整 */
+            animation: rotate 20s linear infinite;
+        }
+
+        /* 吉田様の写真のスタイル - imgタグを使用 */
+        .contact-person-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            box-shadow: var(--shadow-medium);
+            display: block; /* 画像として表示 */
+            object-fit: cover; /* 画像が収まるように */
+            position: relative;
+            z-index: 1;
+        }
+
+        .company-name-tag {
+            display: inline-block;
+            background: var(--accent-color); /* タグの色を調整 */
+            color: var(--text-light); /* テキストカラーを白に */
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-message {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+            color: var(--text-primary); /* テキストカラーを調整 */
+        }
+
+        .phone-number {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--primary-color); /* 電話番号の色を調整 */
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+        .phone-number a {
+            color: inherit; /* 親要素の色を継承 */
+            text-decoration: none;
+        }
+        .phone-number a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-person-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+            color: var(--primary-color); /* 名前も調整 */
+        }
+
+        .email-address {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .email-address a {
+            color: var(--primary-color); /* メールアドレスの色も調整 */
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .email-address a:hover {
+            text-decoration: underline;
+            opacity: 0.8;
+        }
+
+        .hours {
+            font-size: 1rem;
+            opacity: 0.8;
+            position: relative;
+            z-index: 1;
+            color: var(--text-secondary); /* 営業時間も調整 */
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%) rotate(15deg);
+            }
+            to {
+                transform: translateX(0) rotate(15deg);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .page-3-title {
+                font-size: 2.5rem;
+            }
+
+            .personal-experience {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .piano-images {
+                grid-template-columns: 1fr;
+            }
+
+            .story-box {
+                padding: 25px;
+            }
+
+            .story-quote {
+                font-size: 1.4rem;
+            }
+
+            .question-text {
+                font-size: 1.8rem;
+            }
+
+            .advice-main-title {
+                font-size: 1.6rem;
+            }
+
+            .final-advice-title {
+                font-size: 2rem;
+            }
+
+            .common-case-section {
+                padding: 40px 20px;
+            }
+
+            .contact-card-bottom {
+                padding: 30px 20px;
+            }
+
+            .phone-number {
+                font-size: 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .page-3-main-content {
+                padding: 40px 0;
+            }
+
+            .story-box {
+                padding: 20px;
+            }
+
+            .experience-text {
+                padding: 20px;
+            }
+
+            .key-advice-block {
+                padding: 25px;
+            }
+
+            .problem-solution-list {
+                padding: 25px;
+            }
+
+            .faq-card {
+                padding: 25px;
+            }
+        }
+
+        /* --- Accessibility --- */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Focus styles for keyboard navigation */
+        a:focus,
+        button:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page-wrapper page-3-wrapper">
+        <!-- Header Section for Page 3 -->
+        <header class="page-3-header">
+            <div class="container">
+                <h1 class="page-3-title">お客様からのご相談</h1>
+            </div>
+        </header>
+
+        <!-- Main Content for Page 3 -->
+        <main class="page-3-main-content">
+            <div class="container">
+                <!-- Section 1: Failure Story -->
+                <section class="failure-story-section">
+                    <div class="story-box">
+                        <p class="story-intro">デジタルピアノをご注文後、先生に報告したら</p>
+                        <p class="story-quote">
+                            「私、電子のピアノの方にはうまく教えられません。」
+                        </p>
+                        <p class="story-conclusion">と言われ、あわてて解約する羽目になりました。</p>
+                    </div>
+                    <p class="story-source">
+                        と、おっしゃるのは、最近アルプラの催事で電子ピアノを導入した琵琶湖市にお住まいのHさん。
+                    </p>
+
+                    <div class="personal-experience">
+                        <div class="experience-text">
+                            <p>
+                                本物のピアノは場所をとるし、質屋にだしてもたいしたお金になりません。なにより、子供の様子を見ると、本当に今だけな気がするんです。これから先も本当に続けてくれるか不安でした。
+                            </p>
+                            <p>
+                                ピアノをがんばって欲しいとは思いますが、そろそろ飽きて興味がなくなるとも思いますし、やめてしまったらあまりにもったいないと思ったので…
+                            </p>
+                        </div>
+                        <div class="experience-text experience-right">
+                            <p>
+                                私も主人も、経験が無いのでどんな機種がいいかわからず、とりあえずたまたまピアノが展示している所へ行きました。いつまで続くかわからないのではじめから高いものは無理だと感じたところ、担当の方がすすめてくださった電子ピアノを導入したのですが、後日先生に報告したら、そう言われてしまったんです！
+                            </p>
+                            <img src="images/person_thinking_icon.png" alt="悩んでいる人のアイコン" class="person-icon">
+                        </div>
+                    </div>
+
+                    <div class="piano-images">
+                        <div class="piano-image-wrapper">
+                            <img src="images/piano_upright.png" alt="アップライトピアノ">
+                            <p class="image-caption">様々なタイプのピアノ</p>
+                        </div>
+                        <div class="piano-image-wrapper">
+                            <img src="images/piano_grand.png" alt="グランドピアノ">
+                            <p class="image-caption">音色の違いも重要</p>
+                        </div>
+                        <div class="piano-image-wrapper">
+                            <img src="images/piano_keyboard_detail.png" alt="ピアノの鍵盤">
+                            <p class="image-caption">鍵盤のタッチ感</p>
+                        </div>
+                    </div>
+
+                    <p class="teacher-view">
+                        先生の「電子ピアノの方にはうまく教えられません…」とは、ちょっと誤解を招く表現かもしれませんが、「電子ピアノでは、きめ細かい表現まで指導することは難しい」という意味だったようです。せっかく貴重なご指導をして下さる先生の期待を裏切りたくなかった。先生にしてみれば「指導する立場」であることも考慮してピアノを準備して欲しいと願ったのでしょう。一番の相談相手は、やはり先生ですが、先生も指導の専門家であって楽器の専門家ではありません。そこで、先生も、ご自身の経験値と知識だけで、ご自身で楽器店を選んで、ご案内くださることがあります。これでは、忙しい先生のスケジュールに合わせることが困難になってしまいます。
+                    </p>
+
+                    <h2 class="section-question">
+                        <span class="question-text">
+                            では、この失敗をしないためにはどうすればいいでしょう
+                        </span>
+                    </h2>
+                    <div class="next-page-prompt">
+                        <div class="arrow-down-icon">↓</div>
+                        <p>次のページへ</p>
+                    </div>
+                </section>
+
+                <!-- Section 2: Common Case & Solution -->
+                <section class="common-case-section">
+                    <h2 class="common-case-title">このご相談は多いケースです</h2>
+                    <p class="common-case-description">
+                        親御さんにピアノの経験があまりなく、誰に相談したらよいか分からない方に多いようです。ご自身に本物のピアノがある経験はあるけれど、最新の機種については分からないという方もいらっしゃいます。また、「このピアノは、いつまで使えますか？」とご質問される方が多く、上達度合いに応じて買い替える必要があるという考えをお持ちの方も多いようです。
+                    </p>
+
+                    <div class="key-advice-block">
+                        <p class="advice-main-title">
+                            <span class="highlight-underline">ピアノのご購入相談は、まず先生にしましょう</span>
+                        </p>
+                        <p class="advice-sub-title">これが、失敗しないポイントです。</p>
+                    </div>
+
+                    <div class="problem-solution-list">
+                        <p class="list-intro">
+                            誰に相談していいかわからない。また、何を始めたらいいかわからない。
+                            いざ購入しようと思っても、不安な気持ちを抱いていただくのは当然だと思います。
+                        </p>
+                        <ul>
+                            <li>
+                                <span class="bold">■ご予算と導入時期が決まっている場合は事前に相談しましょう。</span>
+                            </li>
+                            <li>
+                                <span class="bold">■ピアノレッスンを教えてくださる先生に、以下を確認してください。</span>
+                                <ul>
+                                    <li>先生のレベルに合ったものを教えるための鍵盤の数はどれくらい必要？</li>
+                                    <li>ピアノ以外にも習わせたいものが他にあります。</li>
+                                    <li>発表会や実技試験などいろいろな経験をさせてあげたい。</li>
+                                    <li>電子ピアノでは対応できない場合はその理由をはっきりと確認しましょう</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span class="bold">■ご不安な気持ちをすべて相談しましょう</span>
+                            </li>
+                        </ul>
+                        <img src="images/person_thinking_icon.png" alt="疑問を持つ人のアイコン" class="problem-list-person-icon">
+                    </div>
+
+                    <div class="teacher-knowledge-limit">
+                        <p>
+                            ただ、先生は生のピアノと電子ピアノの違いは良くご存じですが、
+                            より具体的な話になるとご存知ないことが出てくる場合があります。
+                            例えば、
+                        </p>
+                        <ul>
+                            <li>ピアノの機種の違い、設置場所、音色、維持費やメンテナンスについてなど。</li>
+                            <li>特に、電子ピアノは、そもそも弾いたことがない先生が多いのです。</li>
+                        </ul>
+                    </div>
+
+                    <p class="final-conclusion-text">そこで次に、信頼できる相談先は、</p>
+                    <p class="final-advice-title">
+                        <span class="highlight-underline">先生に紹介いただいた楽器屋さんにする！</span>
+                    </p>
+                    <p class="final-call-to-action">してください。</p>
+
+                    <div class="faq-and-contact-info">
+                        <div class="faq-card">
+                            <p>具体的にピアノをご検討される際には、知りたいことがたくさん出てくるでしょう。</p>
+                            <ul>
+                                <li>音の響きと材質、お部屋との音響効果は、どの機種が良い？既存の家具との調和は？</li>
+                                <li>調律やメンテナンス代は？将来的に不要になったら処分できるの？</li>
+                                <li>電子ピアノ、中古楽器、新品楽器、我が家にピッタリなのはどれ？</li>
+                                <li>予算はどれくらい？どこで試奏できる？</li>
+                            </ul>
+                            <p>
+                                これら全てを熟知した信頼できるピアノ専門店と、確かな技術を持つ調律師さんを紹介してくださる楽器店の先生をご紹介していただくのが一番です。
+                            </p>
+                        </div>
+                        <div class="contact-card-bottom">
+                            <img src="images/yoshida_photo.png" alt="トリイ ピアノコーディネーター 吉田健一様の写真" class="contact-person-photo">
+                            <p class="company-name-tag">株式会社トリイ</p>
+                            <p class="contact-message">
+                                私どもトリイ楽器でもいつでもご相談やご不安にお答えできるよう専門のピアノスタッフがおります。もしピアノ選びでお困りでしたらお気軽に下記までご連絡ください。
+                            </p>
+                            <p class="phone-number">
+                                📞 <a href="tel:09042961913">090-4296-1913</a>
+                            </p>
+                            <p class="contact-person-name">トリイ ピアノコーディネーター 吉田健一</p>
+                            <p class="email-address">
+                                ✉️ mail: <a href="mailto:yoshida@toriimusic.co.jp">yoshida@toriimusic.co.jp</a>
+                            </p>
+                            <p class="hours">24時間いつでも</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
